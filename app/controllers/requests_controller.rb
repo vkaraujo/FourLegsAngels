@@ -10,6 +10,7 @@ class RequestsController < ApplicationController
   def create
     @pet = Pet.find(params[:pet_id])
     @request = Request.new(request_params)
+    @request.user = current_user
     @request.pet = @pet
     if @request.save
       redirect_to pet_path(@pet)
