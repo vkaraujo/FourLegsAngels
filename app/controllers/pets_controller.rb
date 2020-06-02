@@ -17,7 +17,8 @@ class PetsController < ApplicationController
 
   def create
     @pet = Pet.new(pet_params)
-    if @pet.save!
+    @pet.user = current_user
+    if @pet.save
       flash[:success] = "Object successfully created"
       redirect_to @pet
     else
@@ -48,6 +49,6 @@ class PetsController < ApplicationController
   end  
 
   def pet_params
-    params.require().permit(:name, :specie, :size, :description)
+    params.require(:pet).permit(:name, :specie, :size, :description, :user)
   end  
 end
