@@ -25,7 +25,6 @@ class PetsController < ApplicationController
       render 'new'
     end
   end
-
   
   private
 
