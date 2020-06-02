@@ -1,12 +1,13 @@
 class RequestsController < ApplicationController
   def index
-    @requests = Request.all
+    @requests = policy_scope(Request).where(user: current_user)
   end
 
   def create
     @request = Request.new
     @request.user = current_user
     @request.pet = Pet.find(params[:pet_id])
+    authorize @request
     if @request.save
       redirect_to pet_path(@request.pet)
     else

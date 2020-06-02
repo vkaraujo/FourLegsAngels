@@ -6,7 +6,10 @@
     <p><%= @pet.specie %></p>
     <p><%= @pet.size %></p>
     <p><%= @pet.description %></p>
-    <%= link_to "Request this Dog", pet_requests_path(@pet), method: :post %>
+    <% if @pet.user != current_user %>
+    <!-- && policy(Request).create? -->
+      <%= link_to "Request this Dog", pet_requests_path(@pet), method: :post %>
+    <% end %>
   </div>
 </div>
 <div class="container">
