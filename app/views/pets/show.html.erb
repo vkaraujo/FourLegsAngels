@@ -9,4 +9,16 @@
     <h2>requests for <%= @pet.name %></h2>
   </div>
 </div>
+<div class="container">
+  <% if policy(@pet).edit? %>
+    <%= link_to "Update", edit_pet_path(@pet) %>
+  <% end %>
+</div>
+<div class="container">
+  <% if policy(@pet).destroy? %>
+    <%= link_to pet_path(@pet), method: :delete, data: { confirm: 'Are you sure?' } do %>
+      <p>Remove from the list <i class="fas fa-trash text-dark"></i></p>
+    <% end %>
+  <% end %>
+</div>
 <%= link_to "Back to Pet-list", pets_path %>
