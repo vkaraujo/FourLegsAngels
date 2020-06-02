@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
-  get 'pets/index'
-  get 'pets/show'
+  resources :pets
   devise_for :users
   root to: 'pages#home'
   resources :pets do
