@@ -17,7 +17,7 @@ class PetsController < ApplicationController
 
   def create
     @pet = Pet.new(pet_params)
-    if @pet.save
+    if @pet.save!
       flash[:success] = "Object successfully created"
       redirect_to @pet
     else
