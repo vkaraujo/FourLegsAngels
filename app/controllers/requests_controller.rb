@@ -3,17 +3,12 @@ class RequestsController < ApplicationController
     @requests = Request.all
   end
 
-  def new
-    @request = request.new
-  end
-
   def create
-    @pet = Pet.find(params[:pet_id])
-    @request = Request.new(request_params)
+    @request = Request.new
     @request.user = current_user
-    @request.pet = @pet
+    @request.pet = Pet.find(params[:pet_id])
     if @request.save
-      redirect_to pet_path(@pet)
+      redirect_to pet_path(@request.pet)
     else
       render 'pets/show'
     end

@@ -2,7 +2,7 @@
   <h1> Requests:</h1>
   <ul>
     <% @requests.each do |request| %>
-    <li><%= link_to request.pet.name, pet_path %> - status:<%= request.status %></li>
+    <li><%= link_to request.pet.name, pet_path(request.pet_id) %> - status:<%= request.status %></li>
     <% end%>
   </ul>
 </div>

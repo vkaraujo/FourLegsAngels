@@ -2,11 +2,11 @@
 
 <div>
   <h2 style="background-image: url('https://source.unsplash.com/random')"><%= @pet.name %></h2>
-  <div>
+  <div class = "container">
     <p><%= @pet.specie %></p>
     <p><%= @pet.size %></p>
     <p><%= @pet.description %></p>
-    <h2>requests for <%= @pet.name %></h2>
+    <%= link_to "Request this Dog", pet_requests_path(@pet), method: :post %>
   </div>
 </div>
 <div class="container">
