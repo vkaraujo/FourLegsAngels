@@ -1,7 +1,7 @@
 <div class="container">
   <h1>Pets List</h1>
   <% if policy(Pet).create? %>
-    <%= link_to 'Add Pet', new_pet_path %>
+    <%= link_to 'Add Pet', new_pet_path, class: "btn btn-flat" %>
   <% end %>
   <ul class="cards">
     <% @pets.each do |pet| %>
