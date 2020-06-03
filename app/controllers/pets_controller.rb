@@ -7,6 +7,14 @@ class PetsController < ApplicationController
 
   def show
     authorize @pet
+    @pets = Pet.geocoded # returns pets with coordinates
+
+    @markers = @pets.map do |pet|
+      {
+        lat: pet.latitude,
+        lng: pet.longitude
+      }
+    end
   end
 
   def new
