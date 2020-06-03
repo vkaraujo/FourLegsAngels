@@ -9,23 +9,12 @@ User.destroy_all
 
 Pet.destroy_all
 
-User.create!(email: "teste@gmail.com", password: '123456')
-User.create!(email: "teste2@gmail.com", password: '123456')
-User.create!(email: "teste3@gmail.com", password: '123456')
-User.create!(email: "teste4@gmail.com", password: '123456')
-User.create!(email: "teste5@gmail.com", password: '123456')
+User.create!(email: "sabrina@gmail.com", password: '123456')
+User.create!(email: "leo@gmail.com", password: '123456')
+User.create!(email: "theo@gmail.com", password: '123456')
 
-Pet.create!(name: 't1', user: User.all.sample )
-Pet.create!(name: 't2', user: User.all.sample )
-Pet.create!(name: 't3', user: User.all.sample )
-Pet.create!(name: 't4', user: User.all.sample )
-Pet.create!(name: 't5', user: User.all.sample )
-Pet.create!(name: 't11', user: User.all.sample )
-Pet.create!(name: 't21', user: User.all.sample )
-Pet.create!(name: 't311', user: User.all.sample )
-Pet.create!(name: 't41', user: User.all.sample )
-Pet.create!(name: 't51', user: User.all.sample )
-
-Request.create!(user: User.all.sample, pet: Pet.all.sample)
-Request.create!(user: User.all.sample, pet: Pet.all.sample)
-Request.create!(user: User.all.sample, pet: Pet.all.sample)
+Pet.create!(name: 'Rex', specie: "DOG", size: "Medium", description: "Labrador", user: User.all.sample )
+Pet.create!(name: 'Scooby', specie: "CAT", size: "Small", description: "Very Fast", user: User.all.sample )
+Pet.create!(name: 'Sabrina', specie: "DOG", size: "Big", description: "Pastor Alemao", user: User.all.sample )
+Pet.create!(name: 'Fenix', specie: "DOG", size: "Medium", description: "Crazy", user: User.all.sample )
+Pet.create!(name: 'Flash', specie: "TURTLE", size: "Medium", description: "Big", user: User.all.sample )
