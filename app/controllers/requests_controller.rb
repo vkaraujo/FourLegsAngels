@@ -1,6 +1,7 @@
 class RequestsController < ApplicationController
   def index
     @requests = policy_scope(Request).where(user: current_user)
+    @user_pets_requests = policy_scope(Request).where(pet_id: Pet.where(user: current_user).ids)
   end
 
   def create
@@ -17,13 +18,9 @@ class RequestsController < ApplicationController
 
   def update
     @request = Request.find(params[:id])
-    @request.update(request_params)
+    authorize @request
+    @request.update(status: !@request.status)
     redirect_to requests_path
   end
 
-  private
-
-  def request_params
-    params.require(:request).permit(:status, :pet_id, :user_id)
-  end
 end
