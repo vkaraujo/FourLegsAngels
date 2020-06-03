@@ -1,11 +1,13 @@
-<h1>Pets List</h1>
-<% if policy(Pet).create? %>
-  <%= link_to 'Add Pet', new_pet_path %>
-<% end %>
-<ul class="cards">
-  <% @pets.each do |pet| %>
-  <li class="card-category" style="background-image: url(https://images.unsplash.com/photo-1560743641-3914f2c45636?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=633&q=80)">
-    <h2><%= link_to pet.name, pet %></h2>
-  </li>
+<div class="container">
+  <h1>Pets List</h1>
+  <% if policy(Pet).create? %>
+    <%= link_to 'Add Pet', new_pet_path %>
   <% end %>
-</ul>
+  <ul class="cards">
+    <% @pets.each do |pet| %>
+    <li class="card-category" style="background-image: url(https://images.unsplash.com/photo-1560743641-3914f2c45636?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=633&q=80)">
+      <h2><%= link_to pet.name, pet %></h2>
+    </li>
+    <% end %>
+  </ul>
+</div>
