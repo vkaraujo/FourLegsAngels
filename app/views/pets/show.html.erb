@@ -8,7 +8,7 @@
     <p>Size: <%= @pet.size %></p>
     <p>Description: <%= @pet.description %></p>
     <% if policy(Request.new(pet: @pet, user: current_user)).create? %>
-      <%= link_to "Request this Pet", pet_requests_path(@pet), method: :post %>
+      <%= link_to "Request this Pet", pet_requests_path(@pet),class: "btn btn-flat", method: :post %>
     <% end %>
   </div>
 </div>
@@ -25,5 +25,5 @@
   <% end %>
 </div>
 <div class="container">
-  <%= link_to "Back to Pet-list", pets_path %>
+  <%= link_to "Back to Pet-list", pets_path, class: "btn btn-flat" %>
 </div>

@@ -4,7 +4,7 @@
     <% @user_pets_requests.each do |my_pets_request| %>
       <% if policy(my_pets_request).index? %>
       <% status_output = my_pets_request.status ? "Request approved" : "Pending approval" %>
-        <li><%= link_to my_pets_request.pet.name, pet_path(my_pets_request.pet_id) %> - Status: <%= status_output %> - <%= link_to "Update", request_path(my_pets_request), method: :patch %></li>
+        <li><%= link_to my_pets_request.pet.name, pet_path(my_pets_request.pet_id) %> - Status: <%= status_output %> - <%= link_to "Update", request_path(my_pets_request),class: "btn btn-flat", method: :patch %></li>
       <% end%>
     <% end%>
   </ul>
