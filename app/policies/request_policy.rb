@@ -6,10 +6,14 @@ class RequestPolicy < ApplicationPolicy
   end
 
   def create?
-    true
+    (record.pet.user != user) && !record.pet.users.include?(user)
+  end
+
+  def update?
+    record.pet.user == user
   end
 
   def index?
-    record.user == user || record.pet.user == user
+    (record.user == user) || (record.pet.user == user)
   end
 end
