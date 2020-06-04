@@ -11,18 +11,22 @@
       <%= link_to "Request this Pet", pet_requests_path(@pet),class: "btn btn-flat", method: :post %>
     <% end %>
   </div>
-</div>
-<div class="container">
-  <% if policy(@pet).edit? %>
+  <div class="container">
+    <% if policy(@pet).edit? %>
     <%= link_to "Update", edit_pet_path(@pet) %>
   <% end %>
-</div>
-<div class="container">
-  <% if policy(@pet).destroy? %>
-    <%= link_to pet_path(@pet), method: :delete, data: { confirm: 'Are you sure?' } do %>
-      <p>Remove from the list <i class="fas fa-trash text-dark"></i></p>
+  </div>
+  <div class="container">
+    <% if policy(@pet).destroy? %>
+      <%= link_to pet_path(@pet), method: :delete, data: { confirm: 'Are you sure?' } do %>
+        <p>Remove from the list <i class="fas fa-trash text-dark"></i></p>
     <% end %>
   <% end %>
+  </div>
+  <div id="map"
+       style="width: 100%; height: 600px;"
+       data-markers="<%= @markers.to_json %>"
+       data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
 </div>
 <div class="container">
   <%= link_to "Back", pets_path, class: "btn btn-flat" %>
