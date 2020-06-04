@@ -1,5 +1,5 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-4angels">
-  <%= link_to "#", class: "navbar-brand" do %>
+  <%= link_to root_path, class: "navbar-brand" do %>
     <%= image_tag "logo4.bmp" %>
   <% end %>
 
@@ -20,7 +20,6 @@
           <%= link_to "My Requests", requests_path, class: "dropdown-item" %>
           <%= link_to "Log out", destroy_user_session_path, class: "dropdown-item", method: :delete %>
         </div>
-        <%= current_user.email if current_user %>
       </li>
     </ul>
   </div>

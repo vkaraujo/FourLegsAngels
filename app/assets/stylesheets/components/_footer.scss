@@ -1,9 +1,11 @@
+$footer_height: 100px;
+
 .footer {
   background: #1EDD88;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 100px;
+  height: $footer_height;
   padding: 0px 50px;
   color: rgba(0,0,0,0.3);
   position: fixed;
@@ -12,6 +14,14 @@
   right: 0px;
   margin-bottom: 0px;
 }
+.photo {
+  
+}
+
+.margin-footer {
+  margin-bottom: $footer_height + 16px;
+}
+
 .footer-links {
   display: flex;
   align-items: center;
