@@ -18,11 +18,10 @@
                   required: true,
                   input_html: { autocomplete: "new-password" } %>
     </div>
-
-    <div class="form-actions">
-      <%= f.button :submit, "Sign up" %>
-    </div>
+      <%= f.button :submit, "Sign up", class: "btn btn-flat" %>
   <% end %>
+  <p></p>
+  <p><i class="fas fa-arrow-circle-down"></i> If you are already register!</p>
 
   <%= render "devise/shared/links" %>
 </div>
