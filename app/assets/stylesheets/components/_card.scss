@@ -60,23 +60,23 @@
   overflow: hidden;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  width: 320px;
+  width: 500px;
 }
 
 .card-pet > img {
-  height: 180px;
+  height: 320px;
   width: 100%;
   object-fit: cover;
 }
 
 .card-pet h2 {
-  font-size: 16px;
+  font-size: 24px;
   font-weight: bold;
   margin: 0;
 }
 
 .card-pet p {
-  font-size: 12px;
+  font-size: 16px;
   opacity: .7;
   margin: 0;
 }
