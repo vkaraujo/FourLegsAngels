@@ -19,7 +19,7 @@
       </div>
     </div>
   </div><br>
-  <div class="d-flex justify-content-around show">
+ <div class="d-flex justify-content-around show">
     <% if policy(Request.new(pet: @pet, user: current_user)).create? %>
       <%= link_to "Request this Pet", pet_requests_path(@pet), class: "btn btn-success", method: :post %>
     <% end %>
