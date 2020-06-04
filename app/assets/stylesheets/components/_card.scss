@@ -3,7 +3,7 @@
   grid-template-columns: 1fr 1fr 1fr;
 	grid-gap: 16px;
 	margin-top: 20px;
-	margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .card-category {
@@ -97,6 +97,11 @@
   width: 40px;
 }
 
+a:hover {
+  text-decoration: none;
+}
+
 .card-show {
   width: 400px;
 }
+

@@ -1,16 +1,12 @@
 <div class="container">
-  <h1>Pets up for adoption:</h1>
   <% if policy(Pet).create? %>
     <%= link_to 'Add Pet', new_pet_path, class: "btn btn-flat" %>
   <% end %>
-  <ul class="cards">
+  <div class="cards">
     <% @pets.each do |pet| %>
-      <li>
         <%= link_to pet_path(pet) do %>
           <%= render "pets/image", pet: pet %>      
-        <% end%>        
-      </li>
-
+        <% end%> 
     <% end %>
-  </ul>
+  </div>
 </div>
