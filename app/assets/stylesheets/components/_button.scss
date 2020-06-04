@@ -58,3 +58,36 @@
   background: linear-gradient(#147EFF, #0F67DA);
   color: white;
 }
+
+.btn-red {
+  color: white;
+  padding: 8px 24px;
+  border-radius: 4px;
+  background: red;
+  transition: 0.4s;
+  border: 2px solid white;
+}
+
+.btn-red:hover {
+  background: white;
+  color: red;
+  transition: 0.4s;
+  border: 2px solid red;
+}
+
+.btn-gray {
+  color: white;
+  padding: 8px 24px;
+  border-radius: 4px;
+  background: #5E6973;
+  transition: 0.4s;
+  border: 2px solid white;
+}
+
+.btn-gray:hover {
+  background: white;
+  color: #5E6973;
+  transition: 0.4s;
+  border: 2px solid #5E6973;
+}
+
