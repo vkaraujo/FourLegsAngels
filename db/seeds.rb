@@ -12,8 +12,8 @@ OpenURI::Buffer.const_set 'StringMax', 0
 
 puts "Cleaning the database"
 
-User.destroy_all
 Pet.destroy_all
+User.destroy_all
 
 puts "DB is clean"
 puts "Creating Users, Pets and Requests"
