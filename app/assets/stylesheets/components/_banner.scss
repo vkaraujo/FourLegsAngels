@@ -18,3 +18,13 @@
   opacity: .7;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
 }
+
+.banner span {
+  color: white;
+  font-weight: bold;
+  background-image:linear-gradient(to right, #16d6d9, #96cc29); 
+  color:rgba(0, 0, 0, 0); 
+  -webkit-background-clip:text; 
+  background-clip:text; 
+  position:relative;
+}
