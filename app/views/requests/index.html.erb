@@ -1,27 +1,35 @@
 <div class="container">
   <h2>My Pet's Requests:</h2>
+  <br>
   <ul>
     <% @user_pets_requests.each do |my_pets_request| %>
       <% if policy(my_pets_request).index? %>
         <% if my_pets_request.status != "request denied" %>
           <li>
-            <%= my_pets_request.user.email %> - <%= link_to my_pets_request.pet.name, pet_path(my_pets_request.pet_id) %> - Status: <%= my_pets_request.status %> - 
-            <%= link_to "Approve Request", request_path(my_pets_request, request: {status: "request approved"}), class: "btn btn-flat", method: :patch %> - 
-            <%= link_to "Deny Request", request_path(my_pets_request, request: {status: "request denied"}), class: "btn btn-flat", method: :patch %>
+            <i class="far fa-user"></i> <%= my_pets_request.user.email %> - <i class="fas fa-paw"></i> <%= link_to my_pets_request.pet.name, pet_path(my_pets_request.pet_id) %> - <i class="fas fa-info-circle"></i> <%= my_pets_request.status %> -
+            <%= link_to request_path(my_pets_request, request: {status: "request approved"}), class: "btn btn-accept", method: :patch do %>
+              <i class="fas fa-check"></i>
+            <% end %>
+            <%= link_to request_path(my_pets_request, request: {status: "request denied"}), class: "btn btn-reject", method: :patch do %>
+              <i class="fas fa-times"></i>
+            <% end %>
           </li>
-        <% end %>  
+          <br>
+        <% end %>
       <% end%>
     <% end%>
   </ul>
   <h2>My Requests:</h2>
+  <br>
   <ul>
     <% @requests.each do |request| %>
       <% if policy(request).index? %>
-        <li><%= request.user.email %> - <%= link_to request.pet.name, pet_path(request.pet_id) %> - Status: <%= request.status %></li>
+        <li><i class="far fa-user"></i> <%= request.user.email %> - <i class="fas fa-paw"></i> <%= link_to request.pet.name, pet_path(request.pet_id) %> - <i class="fas fa-info-circle"></i> <%= request.status %></li>
+        <br>
       <% end%>
     <% end%>
   </ul>
-</div>
-<div class="p-4">
-  <%= link_to "Back", pets_path, class: "btn btn-dark" %>
+  <div class="p-4">
+    <%= link_to "Back", pets_path, class: "btn btn-gray" %>
+  </div>
 </div>

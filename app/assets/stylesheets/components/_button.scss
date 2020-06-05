@@ -91,3 +91,36 @@
   border: 2px solid #5E6973;
 }
 
+.btn-reject {
+  color: white;
+  padding: 1px 8px;
+  border-radius: 50%;
+  background: red;
+  transition: 0.4s;
+  border: 1px solid #6B2737;
+}
+
+.btn-reject:hover {
+  background: white;
+  color: red;
+  transition: 0.4s;
+  border: 1px solid red;
+}
+
+.btn-accept {
+  color: white;
+  padding: 1px 5px;
+  border-radius: 50%;
+  background: #1EDD88;
+  transition: 0.4s;
+  border: 1px solid #255957;
+}
+
+.btn-accept:hover {
+  background: white;
+  color: #1EDD88;
+  transition: 0.4s;
+  border: 1px solid #1EDD88;
+}
+
+
