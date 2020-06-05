@@ -5,7 +5,7 @@
   <div class="cards">
     <% @pets.each do |pet| %>
         <%= link_to pet_path(pet) do %>
-          <%= render "pets/image", pet: pet %>      
+          <%= render "pets/image", pet: pet, class: "image-index" %>      
         <% end%> 
     <% end %>
   </div>
