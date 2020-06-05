@@ -9,14 +9,12 @@ class PetsController < ApplicationController
     authorize @pet
     @pets = Pet.geocoded # returns pets with coordinates
 
-    @markers = @pets.map do |pet|
-      {
-        lat: pet.latitude,
-        lng: pet.longitude,
-        infoWindow: render_to_string(partial: "info_window", locals: { pet: pet }),
-        image_url: helpers.asset_url('map_pin.png')
-      }
-    end
+    @markers = [{
+      lat: @pet.latitude,
+      lng: @pet.longitude,
+      infoWindow: render_to_string(partial: "info_window", locals: { pet: @pet }),
+      image_url: helpers.asset_url('map_pin.png')
+    }]
   end
 
   def new
