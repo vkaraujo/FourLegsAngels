@@ -1,10 +1,12 @@
 .navbar-4angels {
   justify-content: space-between;
   background: white;
-  .navbar-collapse {
-    flex-grow: 0;
-  }
-  .navbar-brand img {
-    width: 80px;
-  }
 }
+
+.navbar-4angels .navbar-collapse {
+  flex-grow: 0;
+}
+.navbar-4angels .navbar-brand img {
+  width: 80px;
+}
+
