@@ -40,7 +40,7 @@ dash = "https://images.pexels.com/photos/1359036/pexels-photo-1359036.jpeg?auto=
 puup = "https://images.pexels.com/photos/3908821/pexels-photo-3908821.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
 
 url_array = [corgi, terrier, lab, husk, pastor, pitbull, dog, dogg, cute, pup, pupp, puppy, dash, puup]
-name_array = ["Rex", "Fluck", "Pi Radianus", "Mel", "Snowball", "Max", "Gilbert", "Chopp", "Bear", "Lua", "Layla", "Bolinha", "Schrubles", "Charmander", "Yoda", "Thor", "Barry Allen", "Morning Star"]
+name_array = ["Rex", "Fluck", "Pi Radianus", "Mel", "Snowball", "Max", "Gilbert", "Chopp", "Beer", "Cachaça", "Lua", "Layla", "Bolinha", "Schrubles", "Charmander", "Yoda", "Thor", "Barry Allen", "Morning Star"]
 address_array = ["Botafogo", "Copacana", "Petropolis", "Teresopolis", "Niteroi", "São Paulo", "São José dos Campos"]
 size_array = ["Small", "Medium", "Big"]
 description_array = ["Like to sleep near humans","Energetic and smart. Be worried if things are too quiet, you most likely need new shoes","Will eat your phone if you let","Considering its destruction potential, it is problably good for protection","Prone to sleep anywhere, but a really great dog when it is awake","Love small kids. Keep it away from chocolate","99% anjo, mas aquele 1%...","Loves to be hugged and kissed","Really energetic, love/hater her toys"]
@@ -52,8 +52,6 @@ url_array.each do |url|
   pet.photo.attach(io: file, filename: filename)
   pet.save
 end
-
-#Request.create!(user: User.all.sample, pet: Pet.all.sample  )
 
 puts "Done"
 
