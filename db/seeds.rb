@@ -12,11 +12,11 @@ OpenURI::Buffer.const_set 'StringMax', 0
 
 puts "Cleaning the database"
 
-User.destroy_all
 Pet.destroy_all
+User.destroy_all
 
 puts "DB is clean"
-puts "Creating Users, Pets and Requests"
+puts "Creating Users and Pets"
 
 User.create!(email: "vkaraujo00@gmail.com", password: '123456')
 User.create!(email: "player1@gmail.com", password: 'player1')
@@ -46,7 +46,7 @@ url_array = [corgi, terrier, lab, husk, pastor, pitbull, dog, dogg, cute, pup, p
 name_array = ["Rex", "Fluck", "Pi Radianus", "Mel", "Snowball", "Max", "Gilbert", "Chopp", "Beer", "Cachaça", "Corote", "Caninha da Roça", "Maria Joana", "Lua", "Layla", "Bolinha", "Schrubles", "Charmander", "Yoda", "Thor", "Barry Allen", "Morning Star"]
 address_array = ["Botafogo", "Copacana", "Petropolis", "Teresopolis", "Niteroi", "São Paulo", "São José dos Campos"]
 size_array = ["Small", "Medium", "Big"]
-description_array = ["Like to sleep near humans","Energetic and smart. Be worried if things are too quiet, you most likely need new shoes","Will eat your phone if you let","Considering its destruction potential, it is problably good for protection","Prone to sleep anywhere, but a really great dog when it is awake","Love small kids. Keep it away from chocolate","99% anjo, mas aquele 1%...","Loves to be hugged and kissed","Really energetic, love/hater her toys"]
+description_array = ["Gender: Male. Like to sleep near humans","Gender: Female. Be worried if things are too quiet","Gender: Male. Will eat your phone if you let", "Gender: Female. Considering its destruction potential, good for protection","Gender: Male. Prone to sleep anywhere", "Gender: Female. Love small kids. Keep it away from chocolate", "Gender: Male. 99% anjo, mas aquele 1%...", "Gender: Female. Loves to be hugged and kissed", "Gender: Male. Really energetic, love/hater her toys"]
 
 url_array.each do |url|
   file = URI.open(url)
@@ -57,4 +57,3 @@ url_array.each do |url|
 end
 
 puts "Done"
-
