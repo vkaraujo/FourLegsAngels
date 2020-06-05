@@ -53,12 +53,7 @@ url_array.each do |url|
   pet.save
 end
 
-20.times do 
-  Request.create!(
-    user: user.all.sample,
-    pet: user.pets.all.sample
-  )
-end
+#Request.create!(user: User.all.sample, pet: Pet.all.sample  )
 
 puts "Done"
 
