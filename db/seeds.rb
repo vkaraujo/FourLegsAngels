@@ -24,7 +24,10 @@ User.create!(email: "sabrina@gmail.com", password: '123456')
 User.create!(email: "leo@gmail.com", password: '123456')
 User.create!(email: "theo@gmail.com", password: '123456')
 
-corgi = "https://images.unsplash.com/photo-1560743641-3914f2c45636?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=633&q=80"
+dogthree = "https://images.pexels.com/photos/257519/pexels-photo-257519.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+dogtwo = "https://images.pexels.com/photos/59965/dog-young-dog-puppy-59965.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+dogone = "https://images.pexels.com/photos/3726314/pexels-photo-3726314.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+corgi = "https://images.pexels.com/photos/1307630/pexels-photo-1307630.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
 terrier = "https://images.unsplash.com/photo-1556229174-5e42a09e45af?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
 lab = "https://images.unsplash.com/photo-1591225472821-23fa84bded0b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
 husk = "https://images.unsplash.com/photo-1590926733709-46595b4a30f9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
