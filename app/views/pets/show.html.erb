@@ -1,4 +1,4 @@
-<div class ="cards" style="position: relative">
+<div class ="container cards">
   <div class="container d-flex flex-column justify-content-around">
     <% if @pet.photo.attached? %>
       <div class="d-flex justify-content-around card-show">
@@ -10,10 +10,12 @@
           <img src="https://images.unsplash.com/photo-1560743641-3914f2c45636?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=633&q=80)" />
     <% end %>
         <div class="card-pet-infos">
-          <div>
+          <div class="w-100">
             <h2><%= @pet.name %></h2>
-            <div>
-              <p> <i class="fas fa-paw"></i> <%= @pet.specie %> <i class="fas fa-expand-arrows-alt"></i> <%= @pet.size %> <i class="fas fa-info-circle"></i> <%= @pet.description %></p>
+            <div class="d-flex justify-content-between card-icons">
+              <div><i class="fas fa-paw"></i> <%= @pet.specie %></div>
+              <div><i class="fas fa-expand-arrows-alt"></i> <%= @pet.size %></div>
+              <div><i class="fas fa-info-circle"></i> <%= @pet.description %></div>
             </div>
           </div>
           <% if @pet.user.photo.attached? %>
@@ -23,8 +25,10 @@
           <% end %>
         </div>
       </div>
-    </div><br>
-   <div class="d-flex justify-content-around card-show">
+    </div>
+    <br>
+    <!-- BUTTONS SECTION -->
+   <div class="d-flex justify-content-between card-show">
       <% if policy(Request.new(pet: @pet, user: current_user)).create? %>
         <%= link_to "Request this Pet", pet_requests_path(@pet), class: "btn-flat", method: :post %>
       <% end %>
@@ -33,12 +37,12 @@
       <% end %>
       <% if policy(@pet).destroy? %>
         <%= link_to pet_path(@pet), class: "btn btn-red", method: :delete, data: { confirm: 'Are you sure?' } do %>
-          <p>Remove <i class="fas fa-trash"></i></p>
+          Remove <i class="fas fa-trash"></i>
         <% end %>
       <% end %>
-    </div>
-    <div class = "container justify-content-around card-show m-4">
+      <!-- <div class = "container justify-content-around card-show m-4"> -->
       <%= link_to "Back", pets_path, class: "btn btn-gray" %>
+      <!-- </div> -->
     </div>
   </div>
   <div class="container d-flex flex-column">
